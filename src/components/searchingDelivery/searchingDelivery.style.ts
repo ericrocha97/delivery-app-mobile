@@ -11,7 +11,8 @@ export const searchingDeliveryStyle = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         flex: 1,
-        flexDirection: "column"
+        flexDirection: "column",
+        backgroundColor: '#FFF'
     },
     title: {
         margin: 20,

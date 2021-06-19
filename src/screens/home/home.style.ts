@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, Platform, StyleSheet } from "react-native";
 import { theme } from "../../../App.style";
 
 export const homeStyle = StyleSheet.create({
@@ -10,6 +10,7 @@ export const homeStyle = StyleSheet.create({
     right: 0,
     bottom: 0,
     margin: 16,
+    marginBottom: Platform.OS === 'ios' ? 48 : 16,
     backgroundColor: theme.colors.primary,
   },
   markerImage: {
