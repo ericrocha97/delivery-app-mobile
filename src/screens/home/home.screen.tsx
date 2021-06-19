@@ -1,6 +1,6 @@
 import React from "react";
-import { Appbar, FAB, Menu } from 'react-native-paper';
-import { Image, View, SafeAreaView } from "react-native";
+import { FAB } from 'react-native-paper';
+import { Image } from "react-native";
 import MapView, { Marker } from 'react-native-maps';
 import { useNavigation } from "@react-navigation/native";
 
@@ -18,15 +18,14 @@ export const HomeScreen = () => {
   const navigation = useNavigation();
 
   function handleNewDelivery() {
-    console.log('clicou')
-    //navigation.navigate('DeliveryRoute')
+    navigation.navigate('DeliveryRoute')
   }
 
   const state: number = 1;
 
   return(
-    <SafeAreaView style={homeStyle.flexView} >
-      <HeaderComponent title='Delivery App' />
+    <SafeAreaViewCustom >
+      <HeaderComponent title='Delivery App' navigation={navigation} />
         <MapView style={homeStyle.flexView} 
           initialRegion={{
             latitude: -24.9556467,
@@ -99,7 +98,7 @@ export const HomeScreen = () => {
             <SearchingDeliveryComponent />
           ) : null
         }
-    </SafeAreaView>
+    </SafeAreaViewCustom>
   )
 }
 

@@ -7,13 +7,16 @@ import { SafeAreaViewCustom } from "../../components/safeAreaViewCustom/safeArea
 import { HeaderComponent } from "../../components/header/header.component";
 
 import { deliveryStyle } from "./delivery.style";
+import { useNavigation } from "@react-navigation/native";
 
 
 export const DeliveryScreen = () => {
   
+  const navigation = useNavigation();
+
   return(
     <SafeAreaViewCustom>
-      <HeaderComponent title='Delivery details' hasBackButton />
+      <HeaderComponent title='Delivery details' hasBackButton navigation={navigation} />
       <View style={deliveryStyle.content}>
         <View style={deliveryStyle.content}>
           <MapView style={deliveryStyle.mapView} 

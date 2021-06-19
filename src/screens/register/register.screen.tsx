@@ -21,7 +21,7 @@ export const RegisterScreen = () => {
   return (
     <SafeAreaViewCustom>
       <ScrollView>
-        <HeaderComponent title='Register' hasBackButton />
+        <HeaderComponent title='Register' hasBackButton navigation={navigation} />
         <View style={registerStyle.content}>
           <TextInput 
             label='Name' 
